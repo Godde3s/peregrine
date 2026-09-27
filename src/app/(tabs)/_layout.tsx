@@ -1,7 +1,7 @@
 import { Tabs } from 'expo-router';
 import { useColorScheme } from 'react-native';
 
-import { Symbol } from '@/components/symbol';
+import { Icon } from '@/components/symbol';
 import { dark, light } from '@/lib/theme';
 
 /**
@@ -31,7 +31,7 @@ export default function TabsLayout() {
         options={{
           title: 'Chats',
           tabBarIcon: ({ focused }) => (
-            <Symbol
+            <Icon
               name={focused ? 'message.fill' : 'message'}
               size={24}
               color={focused ? colors.accent : colors.secondary}
@@ -44,7 +44,7 @@ export default function TabsLayout() {
         options={{
           title: 'Models',
           tabBarIcon: ({ focused }) => (
-            <Symbol
+            <Icon
               name={focused ? 'cpu.fill' : 'cpu'}
               size={24}
               color={focused ? colors.accent : colors.secondary}
@@ -57,7 +57,7 @@ export default function TabsLayout() {
         options={{
           title: 'Settings',
           tabBarIcon: ({ focused }) => (
-            <Symbol
+            <Icon
               name={focused ? 'gearshape.fill' : 'gearshape'}
               size={24}
               color={focused ? colors.accent : colors.secondary}

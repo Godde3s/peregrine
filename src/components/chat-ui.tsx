@@ -10,7 +10,7 @@ import Animated, {
   type SharedValue,
 } from 'react-native-reanimated';
 
-import { Symbol, type IconName } from '@/components/symbol';
+import { Icon, type IconName } from '@/components/symbol';
 import { continuous, font, radius, spacing, type ThemeColors , AnyStyle } from '@/lib/theme';
 
 /* ------------------------------ streaming dots ------------------------------ */
@@ -110,7 +110,7 @@ export function ChatBubble({
       )}
       {error ? (
         <View style={bubbleStyles.errorRow}>
-          <Symbol name="exclamationmark.triangle" size={13} color={colors.danger} />
+          <Icon name="exclamationmark.triangle" size={13} color={colors.danger} />
           <Text
             style={{ color: colors.danger, fontSize: font.footnote, flex: 1 }}
             selectable
@@ -182,7 +182,7 @@ export function EmptyState({
       <View
         style={[emptyStyles.iconWrap, continuous, { backgroundColor: colors.accentSoft }]}
       >
-        <Symbol name={icon} size={26} color={colors.accent} weight="medium" />
+        <Icon name={icon} size={26} color={colors.accent} weight="medium" />
       </View>
       <Text style={[emptyStyles.title, { color: colors.label }]}>{title}</Text>
       <Text style={[emptyStyles.message, { color: colors.secondary }]}>{message}</Text>

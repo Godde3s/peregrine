@@ -6,7 +6,7 @@ import { useQuery } from '@tanstack/react-query';
 
 import { EmptyState, SkeletonRow } from '@/components/chat-ui';
 import { PressableRow } from '@/components/pressable';
-import { Symbol } from '@/components/symbol';
+import { Icon } from '@/components/symbol';
 import { listModels, type ModelInfo } from '@/lib/api';
 import { getApiKey } from '@/lib/storage';
 import { useSettings } from '@/lib/store';
@@ -139,7 +139,7 @@ function ModelRow({
           {model.ownedBy || 'unknown owner'}
         </Text>
       </View>
-      <Symbol name="chevron.right" size={15} color={colors.tertiary} />
+      <Icon name="chevron.right" size={15} color={colors.tertiary} />
     </PressableRow>
   );
 }
@@ -158,7 +158,7 @@ function ErrorCard({
       style={[cardStyles.card, continuous, { backgroundColor: colors.card }]}
     >
       <View style={cardStyles.errorRow}>
-        <Symbol name="wifi.exclamationmark" size={18} color={colors.danger} />
+        <Icon name="wifi.exclamationmark" size={18} color={colors.danger} />
         <Text style={[cardStyles.errorText, { color: colors.label }]} selectable>
           {message}
         </Text>
@@ -171,7 +171,7 @@ function ErrorCard({
         onPress={onRetry}
         style={cardStyles.retry}
       >
-        <Symbol name="arrow.clockwise" size={15} color={colors.accent} />
+        <Icon name="arrow.clockwise" size={15} color={colors.accent} />
         <Text style={[cardStyles.retryText, { color: colors.accent }]}>Retry</Text>
       </PressableRow>
     </View>

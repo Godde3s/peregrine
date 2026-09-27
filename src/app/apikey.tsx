@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 
 import { PressableScale } from '@/components/pressable';
-import { Symbol } from '@/components/symbol';
+import { Icon } from '@/components/symbol';
 import { hapticSuccess, hapticTick } from '@/lib/haptics';
 import { getApiKey, setApiKey } from '@/lib/storage';
 import { continuous, font, radius, spacing, useThemeColors , AnyStyle } from '@/lib/theme';
@@ -81,7 +81,7 @@ export default function ApiKeyScreen() {
       <View style={keyStyles.wrap}>
         <View style={[keyStyles.card, continuous, { backgroundColor: colors.card }]}>
           <View style={keyStyles.row}>
-            <Symbol name="lock.fill" size={18} color={colors.secondary} />
+            <Icon name="lock.fill" size={18} color={colors.secondary} />
             <Text style={[keyStyles.label, { color: colors.secondary }]}>
               Stored in the device Keychain — sent only to your endpoint.
             </Text>

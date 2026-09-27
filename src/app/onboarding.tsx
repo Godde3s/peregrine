@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 
 import { PressableScale } from '@/components/pressable';
-import { Symbol } from '@/components/symbol';
+import { Icon } from '@/components/symbol';
 import { isProbablyUrl, normalizeBase, testConnection } from '@/lib/api';
 import { hapticError, hapticSuccess } from '@/lib/haptics';
 import { setApiKey } from '@/lib/storage';
@@ -78,7 +78,7 @@ export default function Onboarding() {
         keyboardShouldPersistTaps="handled"
       >
         <View style={onboardingStyles.mark}>
-          <Symbol name="bolt.fill" size={30} color={colors.accent} weight="semibold" />
+          <Icon name="bolt.fill" size={30} color={colors.accent} weight="semibold" />
         </View>
         <Text style={[onboardingStyles.title, { color: colors.label }]}>Peregrine</Text>
         <Text style={[onboardingStyles.subtitle, { color: colors.secondary }]}>

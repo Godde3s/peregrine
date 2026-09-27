@@ -68,7 +68,7 @@ const IOS_WEIGHT = {
   bold: 'bold',
 } as const;
 
-export function Symbol({
+export function Icon({
   name,
   size = 20,
   color,

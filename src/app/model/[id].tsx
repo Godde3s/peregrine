@@ -3,7 +3,7 @@ import { useQueryClient } from '@tanstack/react-query';
 import { Text, View } from 'react-native';
 
 import { PressableScale } from '@/components/pressable';
-import { Symbol } from '@/components/symbol';
+import { Icon } from '@/components/symbol';
 import { hapticTap } from '@/lib/haptics';
 import { formatDate } from '@/lib/format';
 import { useChat, useSettings } from '@/lib/store';
@@ -56,7 +56,7 @@ export default function ModelDetail() {
         onPress={startChat}
         style={[detailStyles.cta, continuous, { backgroundColor: colors.accent }]}
       >
-        <Symbol name="text.bubble.fill" size={17} color={colors.onAccent} />
+        <Icon name="text.bubble.fill" size={17} color={colors.onAccent} />
         <Text style={[detailStyles.ctaText, { color: colors.onAccent }]}>
           Start chat
         </Text>

@@ -9,7 +9,7 @@ import Animated, {
 } from 'react-native-reanimated';
 
 import { PressableScale } from '@/components/pressable';
-import { Symbol } from '@/components/symbol';
+import { Icon } from '@/components/symbol';
 import { hapticTap } from '@/lib/haptics';
 import { continuous, font, radius, spacing, type ThemeColors , AnyStyle } from '@/lib/theme';
 
@@ -89,7 +89,7 @@ export function Composer({
               }}
               style={[composerStyles.send, { backgroundColor: colors.accent }]}
             >
-              <Symbol name="arrow.up" size={19} color={colors.onAccent} weight="semibold" />
+              <Icon name="arrow.up" size={19} color={colors.onAccent} weight="semibold" />
             </PressableScale>
           </Animated.View>
         ) : null}
@@ -109,7 +109,7 @@ function StopButton({ colors, onStop }: { colors: ThemeColors; onStop: () => voi
       }}
       style={[composerStyles.send, composerStyles.stop, { borderColor: colors.secondary }]}
     >
-      <Symbol name="stop.fill" size={15} color={colors.secondary} />
+      <Icon name="stop.fill" size={15} color={colors.secondary} />
     </PressableScale>
   );
 }

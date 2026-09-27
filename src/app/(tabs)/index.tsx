@@ -5,7 +5,7 @@ import { FlashList } from '@shopify/flash-list';
 
 import { EmptyState } from '@/components/chat-ui';
 import { PressableRow, PressableScale } from '@/components/pressable';
-import { Symbol } from '@/components/symbol';
+import { Icon } from '@/components/symbol';
 import { hapticWarn } from '@/lib/haptics';
 import { formatTimestamp } from '@/lib/format';
 import { useChat, useSettings, type Conversation } from '@/lib/store';
@@ -73,7 +73,7 @@ export default function ChatsScreen() {
               hitSlop={12}
               style={{ padding: spacing.xs }}
             >
-              <Symbol name="plus" size={26} color={colors.accent} />
+              <Icon name="plus" size={26} color={colors.accent} />
             </PressableScale>
           ),
         }}
@@ -151,7 +151,7 @@ function ConversationRow({
             .join(' · ')}
         </Text>
       </View>
-      <Symbol name="chevron.right" size={15} color={colors.tertiary} />
+      <Icon name="chevron.right" size={15} color={colors.tertiary} />
     </PressableRow>
   );
 }

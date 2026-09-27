@@ -15,7 +15,7 @@ import {
 import Slider from '@react-native-community/slider';
 
 import { PressableRow } from '@/components/pressable';
-import { Symbol } from '@/components/symbol';
+import { Icon } from '@/components/symbol';
 import { isProbablyUrl, normalizeBase, testConnection } from '@/lib/api';
 import { hapticError, hapticSuccess, hapticTick, hapticWarn } from '@/lib/haptics';
 import { formatMs } from '@/lib/format';
@@ -120,12 +120,12 @@ export default function SettingsScreen() {
             onPress={() => router.push('/apikey')}
             style={settingsStyles.row}
           >
-            <Symbol name="key.fill" size={18} color={colors.secondary} />
+            <Icon name="key.fill" size={18} color={colors.secondary} />
             <Text style={[settingsStyles.rowText, { color: colors.label }]}>API key</Text>
             <Text style={[settingsStyles.value, { color: colors.secondary }]}>
               Keychain
             </Text>
-            <Symbol name="chevron.right" size={14} color={colors.tertiary} />
+            <Icon name="chevron.right" size={14} color={colors.tertiary} />
           </PressableRow>
           <Hairline colors={colors} />
           <PressableRow
@@ -136,7 +136,7 @@ export default function SettingsScreen() {
             onPress={() => void runTest()}
             style={settingsStyles.row}
           >
-            <Symbol name="wifi" size={18} color={colors.secondary} />
+            <Icon name="wifi" size={18} color={colors.secondary} />
             <Text style={[settingsStyles.rowText, { color: colors.label }]}>
               Test connection
             </Text>
@@ -154,18 +154,18 @@ export default function SettingsScreen() {
             onPress={() => router.push('/(tabs)/models')}
             style={settingsStyles.row}
           >
-            <Symbol name="cpu" size={18} color={colors.secondary} />
+            <Icon name="cpu" size={18} color={colors.secondary} />
             <Text style={[settingsStyles.rowText, { color: colors.label }]} numberOfLines={1}>
               {model || 'Pick on the Models tab'}
             </Text>
-            <Symbol name="chevron.right" size={14} color={colors.tertiary} />
+            <Icon name="chevron.right" size={14} color={colors.tertiary} />
           </PressableRow>
         </Group>
 
         <SectionLabel text="Generation" colors={colors} />
         <Group colors={colors}>
           <View style={settingsStyles.row}>
-            <Symbol name="slider.horizontal.3" size={18} color={colors.secondary} />
+            <Icon name="slider.horizontal.3" size={18} color={colors.secondary} />
             <Text style={[settingsStyles.rowText, { color: colors.label }]}>Temperature</Text>
             <Text style={[settingsStyles.value, tabularNums, { color: colors.secondary }]}>
               {temperature.toFixed(1)}
@@ -185,7 +185,7 @@ export default function SettingsScreen() {
           />
           <Hairline colors={colors} />
           <View style={settingsStyles.row}>
-            <Symbol name="bolt.fill" size={18} color={colors.secondary} />
+            <Icon name="bolt.fill" size={18} color={colors.secondary} />
             <Text style={[settingsStyles.rowText, { color: colors.label }]}>
               Stream replies
             </Text>
@@ -210,7 +210,7 @@ export default function SettingsScreen() {
             onPress={confirmClear}
             style={settingsStyles.row}
           >
-            <Symbol name="trash" size={18} color={colors.danger} />
+            <Icon name="trash" size={18} color={colors.danger} />
             <Text style={[settingsStyles.rowText, { color: colors.danger }]}>
               Delete all chats
             </Text>
@@ -241,7 +241,7 @@ export default function SettingsScreen() {
             <Text style={[settingsStyles.rowText, { color: colors.label }]}>
               Built against the appllama design bar
             </Text>
-            <Symbol name="link" size={14} color={colors.tertiary} />
+            <Icon name="link" size={14} color={colors.tertiary} />
           </PressableRow>
         </Group>
       </ScrollView>
@@ -257,7 +257,7 @@ function TestResult({ state, colors }: { state: TestState; colors: ReturnType<ty
   if (state.kind === 'ok') {
     return (
       <View style={settingsStyles.testOk}>
-        <Symbol name="checkmark" size={13} color={colors.success} />
+        <Icon name="checkmark" size={13} color={colors.success} />
         <Text style={[settingsStyles.value, tabularNums, { color: colors.success }]}>
           {state.models} models · {formatMs(state.ms)}
         </Text>
